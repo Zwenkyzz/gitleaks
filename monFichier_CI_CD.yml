@@ -1,6 +1,6 @@
 name: Gitleaks Scan
 
-# Déclenche le scan à chaque push sur la branche main
+
 on:
   push:
     branches: [ main ]
@@ -14,8 +14,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Important pour que Gitleaks scanne tout l'historique
+
 
       - name: Gitleaks
         uses: gitleaks/gitleaks-action@v2
